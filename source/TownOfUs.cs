@@ -7,8 +7,6 @@ using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.IL2CPP;
 using HarmonyLib;
-using Reactor;
-using Reactor.Extensions;
 using TownOfUs.CustomOption;
 using TownOfUs.Patches.CustomHats;
 using TownOfUs.RainbowMod;
@@ -20,7 +18,6 @@ using UnityEngine.SceneManagement;
 namespace TownOfUs
 {
     [BepInPlugin(Id, "Town Of Us", "2.4.0")]
-    [BepInDependency(ReactorPlugin.Id)]
     public class TownOfUs : BasePlugin
     {
         public const string Id = "com.slushiegoose.townofus";
@@ -130,7 +127,7 @@ namespace TownOfUs
             //}));
 
             _harmony.PatchAll();
-            DirtyPatches.Initialize(_harmony);
+            //DirtyPatches.Initialize(_harmony);
         }
 
         public static Sprite CreateSprite(string name)

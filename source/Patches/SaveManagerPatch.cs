@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using Reactor;
 
 namespace TownOfUs.RainbowMod
 {

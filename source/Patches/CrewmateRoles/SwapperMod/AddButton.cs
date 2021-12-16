@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using HarmonyLib;
 using Hazel;
-using Reactor;
 using TownOfUs.Roles;
 using UnityEngine;
 using UnityEngine.UI;
@@ -60,7 +59,7 @@ namespace TownOfUs.CrewmateRoles.SwapperMod
                 role.ListOfActives[index] = !role.ListOfActives[index];
 
                 _mostRecentId = index;
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage(string.Join(" ", role.ListOfActives));
+               TownOfUsLog.Log.LogMessage(string.Join(" ", role.ListOfActives));
 
                 SwapVotes.Swap1 = null;
                 SwapVotes.Swap2 = null;

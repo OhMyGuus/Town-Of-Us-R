@@ -1,7 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hazel;
-using Reactor;
 
 namespace TownOfUs.CustomOption
 {
@@ -30,7 +30,7 @@ namespace TownOfUs.CustomOption
 
         public static void ReceiveRpc(MessageReader reader)
         {
-            PluginSingleton<TownOfUs>.Instance.Log.LogInfo("Options received:");
+           TownOfUsLog.Log.LogInfo("Options received:");
             while (reader.BytesRemaining > 0)
             {
                 var id = reader.ReadInt32();
@@ -45,7 +45,7 @@ namespace TownOfUs.CustomOption
 
                 customOption?.Set(value);
 
-                PluginSingleton<TownOfUs>.Instance.Log.LogInfo($"{customOption?.Name} : {customOption}:");
+               TownOfUsLog.Log.LogInfo($"{customOption?.Name} : {customOption}:");
             }
         }
     }

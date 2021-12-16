@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Reactor.Extensions;
 using TownOfUs.CrewmateRoles.MedicMod;
 using TownOfUs.Extensions;
 using TownOfUs.ImpostorRoles.CamouflageMod;
@@ -14,7 +13,7 @@ using UnhollowerBaseLib;
 using UnityEngine;
 using Object = UnityEngine.Object;
 using PerformKill = TownOfUs.ImpostorRoles.UnderdogMod.PerformKill;
-using Reactor;
+
 
 namespace TownOfUs
 {

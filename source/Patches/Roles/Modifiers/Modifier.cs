@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hazel;
-using Reactor.Extensions;
 using TownOfUs.Extensions;
 using UnityEngine;
 using Random = UnityEngine.Random;

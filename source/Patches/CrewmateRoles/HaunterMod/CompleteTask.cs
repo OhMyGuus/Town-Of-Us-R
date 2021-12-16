@@ -2,9 +2,9 @@ using System.Linq;
 using HarmonyLib;
 using Hazel;
 using TownOfUs.Roles;
-using Reactor;
 using UnityEngine;
 using TownOfUs.Extensions;
+using System;
 
 namespace TownOfUs.CrewmateRoles.HaunterMod
 {

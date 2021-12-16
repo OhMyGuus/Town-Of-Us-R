@@ -5,8 +5,6 @@ using System.Reflection;
 using System.Text;
 using BepInEx.Logging;
 using Newtonsoft.Json;
-using Reactor;
-using Reactor.Extensions;
 using UnityEngine;
 
 namespace TownOfUs.Patches.CustomHats
@@ -17,7 +15,7 @@ namespace TownOfUs.Patches.CustomHats
         private const string HAT_METADATA_JSON = "metadata.json";
         private const int HAT_ORDER_BASELINE = 99;
 
-        private static ManualLogSource Log => PluginSingleton<TownOfUs>.Instance.Log;
+        private static ManualLogSource Log =>TownOfUsLog.Log;
         private static Assembly Assembly => typeof(TownOfUs).Assembly;
 
         private static bool LoadedHats = false;

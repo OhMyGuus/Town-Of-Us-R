@@ -4,7 +4,6 @@ using System.Linq;
 using HarmonyLib;
 using Hazel;
 using InnerNet;
-using Reactor;
 using TownOfUs.Extensions;
 using TownOfUs.Roles;
 using TownOfUs.Roles.Modifiers;
@@ -189,8 +188,8 @@ namespace TownOfUs.CrewmateRoles.MayorMod
             {
                 // __instance.exiledPlayer = __instance.wasTie ? null : __instance.exiledPlayer;
                 var exiledString = exiled == null ? "null" : exiled.PlayerName;
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"Exiled PlayerName = {exiledString}");
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"Was a tie = {tie}");
+               TownOfUsLog.Log.LogMessage($"Exiled PlayerName = {exiledString}");
+               TownOfUsLog.Log.LogMessage($"Was a tie = {tie}");
             }
         }
 

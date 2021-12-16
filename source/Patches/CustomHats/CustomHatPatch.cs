@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
-using Reactor;
-using Reactor.Extensions;
 using TMPro;
 using UnityEngine;
 using Object = UnityEngine.Object;

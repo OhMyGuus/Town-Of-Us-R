@@ -1,7 +1,6 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Reactor.Extensions;
 using TownOfUs.Extensions;
 using TownOfUs.Roles;
 using UnityEngine;

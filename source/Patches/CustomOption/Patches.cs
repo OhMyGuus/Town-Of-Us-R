@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
-using Reactor;
-using Reactor.Extensions;
 using TownOfUs.Extensions;
 using UnhollowerBaseLib;
 using UnityEngine;

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using Hazel;
-using Reactor;
-using Reactor.Extensions;
 using TownOfUs.CrewmateRoles.AltruistMod;
 using TownOfUs.CrewmateRoles.MedicMod;
 using TownOfUs.CrewmateRoles.InvestigatorMod;
@@ -98,7 +96,7 @@ namespace TownOfUs
             var crewmates = Utils.GetCrewmates(impostors);//.Where(o => o.Data.Role.Role == RoleTypes.Crewmate).ToList();
             crewmates.Shuffle();
             impostors.Shuffle();
-            PluginSingleton<TownOfUs>.Instance.Log.LogMessage($"RPC SET ROLE {impostors.Count} -> {crewmates.Count}");
+           TownOfUsLog.Log.LogMessage($"RPC SET ROLE {impostors.Count} -> {crewmates.Count}");
 
             SortRoles(CrewmateRoles);
             SortRoles(NeutralRoles, CustomGameOptions.MaxNeutralRoles);
@@ -443,7 +441,7 @@ namespace TownOfUs
                         readSByte2 = reader.ReadSByte();
                         SwapVotes.Swap2 =
                             MeetingHud.Instance.playerStates.FirstOrDefault(x => x.TargetPlayerId == readSByte2);
-                        PluginSingleton<TownOfUs>.Instance.Log.LogMessage("Bytes received - " + readSByte + " - " +
+                       TownOfUsLog.Log.LogMessage("Bytes received - " + readSByte + " - " +
                                                                           readSByte2);
                         break;
                     case CustomRPC.Shift:
@@ -786,7 +784,7 @@ namespace TownOfUs
         {
             public static void Postfix()
             {
-                PluginSingleton<TownOfUs>.Instance.Log.LogMessage("RPC SET ROLE");
+               TownOfUsLog.Log.LogMessage("RPC SET ROLE");
                 var infected = GameData.Instance.AllPlayers.ToArray().Where(o => o.IsImpostor());
 
                 Utils.ShowDeadBodies = false;
